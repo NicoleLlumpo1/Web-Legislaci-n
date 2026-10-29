@@ -1,0 +1,122 @@
+/* ===== VARIABLES DE COLOR (claro / oscuro) ===== */
+:root {
+  --colorFondoPagina: #f5f6fa;
+  --colorFondoTarjeta: #ffffff;
+  --colorTextoPrincipal: #1f2430;
+  --colorTextoSecundario: #5b6275;
+  --colorBorde: #dde1ea;
+  --colorAcento: #5b4bd6;
+  --colorAcentoSuave: #ece9ff;
+  --colorCorrecto: #1f8a4c;
+  --colorCorrectoFondo: #e1f5e9;
+  --colorIncorrecto: #c0392b;
+  --colorIncorrectoFondo: #fbe5e2;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --colorFondoPagina: #14161d;
+    --colorFondoTarjeta: #1e212b;
+    --colorTextoPrincipal: #e8eaf1;
+    --colorTextoSecundario: #9aa1b5;
+    --colorBorde: #333848;
+    --colorAcento: #9b8cff;
+    --colorAcentoSuave: #2a2650;
+    --colorCorrecto: #5fd08b;
+    --colorCorrectoFondo: #17301f;
+    --colorIncorrecto: #ff8a7a;
+    --colorIncorrectoFondo: #3a1e1b;
+  }
+}
+
+/* ===== BASE ===== */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: var(--colorFondoPagina);
+  color: var(--colorTextoPrincipal);
+  line-height: 1.55;
+}
+
+/* ===== ENCABEZADO ===== */
+.encabezadoPrincipal { padding: 24px 20px 8px; max-width: 900px; margin: 0 auto; }
+.tituloPrincipal { margin: 0; font-size: 1.6rem; }
+.subtituloPrincipal { margin: 4px 0 0; color: var(--colorTextoSecundario); }
+
+/* ===== NAVEGACIÓN ===== */
+.menuNavegacionSecciones {
+  display: flex; gap: 8px; overflow-x: auto;
+  padding: 12px 20px; max-width: 900px; margin: 0 auto;
+}
+.botonNavegacion {
+  white-space: nowrap; cursor: pointer;
+  padding: 8px 14px; border-radius: 999px;
+  border: 1px solid var(--colorBorde);
+  background: var(--colorFondoTarjeta); color: var(--colorTextoPrincipal);
+  font-size: 0.9rem;
+}
+.botonNavegacionActivo { background: var(--colorAcento); color: #fff; border-color: var(--colorAcento); }
+
+/* ===== CONTENEDORES ===== */
+.contenedorPrincipal { max-width: 900px; margin: 0 auto; padding: 8px 20px 60px; }
+.seccionOculta { display: none; }
+.textoAyuda { color: var(--colorTextoSecundario); font-size: 0.9rem; }
+
+/* ===== BUSCADOR ===== */
+.campoBuscador {
+  width: 100%; padding: 12px 14px; margin-bottom: 12px;
+  border-radius: 10px; border: 1px solid var(--colorBorde);
+  background: var(--colorFondoTarjeta); color: var(--colorTextoPrincipal); font-size: 1rem;
+}
+
+/* ===== UNIDADES DEL MATERIAL (desplegables) ===== */
+.tarjetaUnidad {
+  background: var(--colorFondoTarjeta); border: 1px solid var(--colorBorde);
+  border-radius: 12px; margin-bottom: 10px; overflow: hidden;
+}
+.tituloUnidad { cursor: pointer; padding: 14px 16px; font-weight: 600; }
+.listaPuntosUnidad { margin: 0; padding: 0 20px 14px 36px; }
+.listaPuntosUnidad li { margin-bottom: 6px; }
+.textoResaltadoBusqueda { background: var(--colorAcentoSuave); border-radius: 3px; }
+
+/* ===== TARJETAS DE PLAZOS ===== */
+.grillaTarjetas { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 10px; }
+.tarjetaPlazo {
+  min-height: 90px; padding: 14px; cursor: pointer; text-align: left;
+  border-radius: 12px; border: 1px solid var(--colorBorde);
+  background: var(--colorFondoTarjeta); color: var(--colorTextoPrincipal); font-size: 0.95rem;
+}
+.tarjetaPlazoRespondida { background: var(--colorAcentoSuave); border-color: var(--colorAcento); font-weight: 600; }
+
+/* ===== TABLAS COMPARATIVAS ===== */
+.tituloCuadroComparativo { margin: 22px 0 8px; font-size: 1.1rem; }
+.envolturaTabla { overflow-x: auto; }
+.tablaComparativa { width: 100%; border-collapse: collapse; background: var(--colorFondoTarjeta); }
+.tablaComparativa th, .tablaComparativa td { border: 1px solid var(--colorBorde); padding: 8px 10px; text-align: left; vertical-align: top; font-size: 0.92rem; }
+.tablaComparativa th { background: var(--colorAcentoSuave); }
+
+/* ===== PRÁCTICA (V o F y Múltiple Choice) ===== */
+.barraResultado { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.textoPuntaje { font-weight: 600; }
+.tarjetaPregunta { background: var(--colorFondoTarjeta); border: 1px solid var(--colorBorde); border-radius: 12px; padding: 14px 16px; margin-bottom: 12px; }
+.textoEnunciado { margin: 0 0 10px; font-weight: 500; }
+.etiquetaTrampa { font-size: 0.75rem; color: var(--colorIncorrecto); font-weight: 700; margin-left: 6px; }
+.filaOpciones { display: flex; flex-wrap: wrap; gap: 8px; }
+.botonOpcion {
+  padding: 8px 14px; cursor: pointer; text-align: left;
+  border-radius: 10px; border: 1px solid var(--colorBorde);
+  background: var(--colorFondo, transparent); color: var(--colorTextoPrincipal); font-size: 0.95rem;
+}
+.botonOpcionColumna { width: 100%; }
+.botonOpcionCorrecta { background: var(--colorCorrectoFondo); border-color: var(--colorCorrecto); }
+.botonOpcionIncorrecta { background: var(--colorIncorrectoFondo); border-color: var(--colorIncorrecto); }
+.textoExplicacion { margin: 10px 0 0; padding: 8px 10px; border-radius: 8px; background: var(--colorAcentoSuave); font-size: 0.92rem; }
+.botonSecundario { padding: 6px 12px; cursor: pointer; border-radius: 8px; border: 1px solid var(--colorBorde); background: var(--colorFondoTarjeta); color: var(--colorTextoPrincipal); }
+
+/* ===== CASOS Y ESTRUCTURA DEL EXAMEN ===== */
+.tarjetaCaso { background: var(--colorFondoTarjeta); border: 1px solid var(--colorBorde); border-radius: 12px; margin-bottom: 10px; }
+.tituloCaso { cursor: pointer; padding: 14px 16px; font-weight: 600; }
+.cuerpoCaso { padding: 0 16px 14px; }
+.cuerpoCaso p { margin: 0 0 8px; }
+.cuerpoCaso ul { margin: 0; padding-left: 20px; }
+.textoEnunciadoCaso { color: var(--colorTextoSecundario); font-style: italic; }

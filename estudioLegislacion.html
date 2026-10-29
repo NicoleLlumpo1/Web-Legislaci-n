@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Estudio Legislación · EPI</title>
+  <link rel="stylesheet" href="estilosEstudioLegislacion.css">
+</head>
+<body>
+
+  <!-- ===== ENCABEZADO ===== -->
+  <header class="encabezadoPrincipal">
+    <h1 class="tituloPrincipal">Legislación · Guía de estudio EPI</h1>
+    <p class="subtituloPrincipal">Material, verdadero/falso, múltiple choice, cuadros, plazos y casos integradores</p>
+  </header>
+
+  <!-- ===== NAVEGACIÓN ENTRE SECCIONES ===== -->
+  <nav class="menuNavegacionSecciones">
+    <button class="botonNavegacion botonNavegacionActivo" data-seccion="seccionMaterialEstudio">📚 Material</button>
+    <button class="botonNavegacion" data-seccion="seccionPlazosNumeros">🔢 Plazos y números</button>
+    <button class="botonNavegacion" data-seccion="seccionCuadrosComparativos">⚖️ Cuadros</button>
+    <button class="botonNavegacion" data-seccion="seccionPracticaVerdaderoFalso">✅ V o F</button>
+    <button class="botonNavegacion" data-seccion="seccionPracticaMultipleChoice">🔘 Múltiple choice</button>
+    <button class="botonNavegacion" data-seccion="seccionCasosIntegradores">🧩 Casos</button>
+    <button class="botonNavegacion" data-seccion="seccionEstructuraExamen">📝 Estructura EPI</button>
+  </nav>
+
+  <main class="contenedorPrincipal">
+
+    <!-- ===== SECCIÓN: MATERIAL DE ESTUDIO ===== -->
+    <section id="seccionMaterialEstudio" class="seccionContenido">
+      <input id="campoBuscadorMaterial" class="campoBuscador" type="search" placeholder="Buscar en el material (ej: hipoteca, plazo, fallo plenario)">
+      <div id="contenedorListadoUnidades" class="contenedorListadoUnidades"></div>
+    </section>
+
+    <!-- ===== SECCIÓN: PLAZOS Y NÚMEROS ===== -->
+    <section id="seccionPlazosNumeros" class="seccionContenido seccionOculta">
+      <p class="textoAyuda">Tocá una tarjeta para ver la respuesta.</p>
+      <div id="contenedorTarjetasPlazos" class="grillaTarjetas"></div>
+    </section>
+
+    <!-- ===== SECCIÓN: CUADROS COMPARATIVOS ===== -->
+    <section id="seccionCuadrosComparativos" class="seccionContenido seccionOculta">
+      <div id="contenedorCuadrosComparativos"></div>
+    </section>
+
+    <!-- ===== SECCIÓN: PRÁCTICA VERDADERO O FALSO ===== -->
+    <section id="seccionPracticaVerdaderoFalso" class="seccionContenido seccionOculta">
+      <div class="barraResultado">
+        <span id="textoPuntajeVerdaderoFalso" class="textoPuntaje">Puntaje: 0 / 0</span>
+        <button id="botonReiniciarVerdaderoFalso" class="botonSecundario">Reiniciar</button>
+      </div>
+      <div id="contenedorPreguntasVerdaderoFalso"></div>
+    </section>
+
+    <!-- ===== SECCIÓN: PRÁCTICA MÚLTIPLE CHOICE ===== -->
+    <section id="seccionPracticaMultipleChoice" class="seccionContenido seccionOculta">
+      <div class="barraResultado">
+        <span id="textoPuntajeMultipleChoice" class="textoPuntaje">Puntaje: 0 / 0</span>
+        <button id="botonReiniciarMultipleChoice" class="botonSecundario">Reiniciar</button>
+      </div>
+      <div id="contenedorPreguntasMultipleChoice"></div>
+    </section>
+
+    <!-- ===== SECCIÓN: CASOS INTEGRADORES ===== -->
+    <section id="seccionCasosIntegradores" class="seccionContenido seccionOculta">
+      <p class="textoAyuda">Pensá tu respuesta primero y después desplegá la resolución.</p>
+      <div id="contenedorCasosIntegradores"></div>
+    </section>
+
+    <!-- ===== SECCIÓN: ESTRUCTURA DEL EPI ===== -->
+    <section id="seccionEstructuraExamen" class="seccionContenido seccionOculta">
+      <div id="contenedorEstructuraExamen"></div>
+    </section>
+
+  </main>
+
+  <script src="logicaEstudioLegislacion.js"></script>
+</body>
+</html>
