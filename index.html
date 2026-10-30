@@ -19,6 +19,7 @@
     <button class="botonNavegacion botonNavegacionActivo" data-seccion="seccionMaterialEstudio">📚 Material</button>
     <button class="botonNavegacion" data-seccion="seccionPlazosNumeros">🔢 Plazos y números</button>
     <button class="botonNavegacion" data-seccion="seccionCuadrosComparativos">⚖️ Cuadros</button>
+    <button class="botonNavegacion" data-seccion="seccionClasificadorContratos">🗂️ Clasificar contratos</button>
     <button class="botonNavegacion" data-seccion="seccionPracticaVerdaderoFalso">✅ V o F</button>
     <button class="botonNavegacion" data-seccion="seccionPracticaMultipleChoice">🔘 Múltiple choice</button>
     <button class="botonNavegacion" data-seccion="seccionCasosIntegradores">🧩 Casos</button>
@@ -42,6 +43,16 @@
     <!-- ===== SECCIÓN: CUADROS COMPARATIVOS ===== -->
     <section id="seccionCuadrosComparativos" class="seccionContenido seccionOculta">
       <div id="contenedorCuadrosComparativos"></div>
+    </section>
+
+    <!-- ===== SECCIÓN: CLASIFICADOR DE CONTRATOS ===== -->
+    <section id="seccionClasificadorContratos" class="seccionContenido seccionOculta">
+      <div class="barraResultado">
+        <span id="textoPuntajeClasificadorContratos" class="textoPuntaje">Puntaje: 0 / 0</span>
+        <button id="botonReiniciarClasificadorContratos" class="botonSecundario">Reiniciar</button>
+      </div>
+      <p class="textoAyuda">Elegí cómo se clasifica cada contrato en cada criterio. Según el resumen de la cátedra.</p>
+      <div id="contenedorClasificadorContratos"></div>
     </section>
 
     <!-- ===== SECCIÓN: PRÁCTICA VERDADERO O FALSO ===== -->

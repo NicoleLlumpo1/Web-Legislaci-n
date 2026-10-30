@@ -120,3 +120,7 @@ body {
 .cuerpoCaso p { margin: 0 0 8px; }
 .cuerpoCaso ul { margin: 0; padding-left: 20px; }
 .textoEnunciadoCaso { color: var(--colorTextoSecundario); font-style: italic; }
+
+/* ===== CLASIFICADOR DE CONTRATOS ===== */
+.filaCriterioContrato { margin-bottom: 10px; }
+.textoCriterioContrato { margin: 0 0 4px; font-size: 0.85rem; color: var(--colorTextoSecundario); }

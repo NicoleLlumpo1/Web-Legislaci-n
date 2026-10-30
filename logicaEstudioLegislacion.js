@@ -234,7 +234,37 @@ const listaPreguntasVerdaderoFalso = [
   { enunciado: "Los socios de la sociedad colectiva y de la S.A. tienen igual responsabilidad.", respuesta: false, explicacion: "Colectiva: subsidiaria, ilimitada y solidaria. S.A.: limitada a las acciones." },
   { enunciado: "La S.A. y S.A.U. dividen su capital en acciones; la S.R.L. en cuotas partes.", respuesta: true, explicacion: "Correcto." },
   { enunciado: "El banco es el librador del cheque de pago diferido.", respuesta: false, explicacion: "El banco es el girado; el librador es el titular de la cuenta que firma.", trampa: true },
-  { enunciado: "El pagaré es una orden de pago y el cheque una promesa de pago.", respuesta: false, explicacion: "Invertido: cheque = orden; pagaré = promesa.", trampa: true }
+  { enunciado: "El pagaré es una orden de pago y el cheque una promesa de pago.", respuesta: false, explicacion: "Invertido: cheque = orden; pagaré = promesa.", trampa: true },
+  { enunciado: "La sociedad unipersonal solo puede constituirse como sociedad anónima.", respuesta: true, explicacion: "Es la SAU, y no puede constituirse por otra sociedad unipersonal." },
+  { enunciado: "La SRL puede tener hasta 100 socios.", respuesta: false, explicacion: "El máximo es de 50 socios." },
+  { enunciado: "El socio oculto no responde frente a terceros porque no figura en el contrato social.", respuesta: false, explicacion: "Responde en forma ilimitada y solidaria junto con los socios que figuran.", trampa: true },
+  { enunciado: "Las asociaciones civiles y fundaciones necesitan autorización estatal para funcionar.", respuesta: true, explicacion: "No existen como persona jurídica hasta que se aprueba su estatuto (IGJ en CABA)." },
+  { enunciado: "El cheque de pago diferido puede librarse con fecha de pago a más de 360 días.", respuesta: false, explicacion: "El plazo máximo es de 360 días desde el libramiento." },
+  { enunciado: "El pagaré sin plazo expreso se considera pagadero a la vista.", respuesta: true, explicacion: "Debe presentarse al cobro dentro de los 12 meses de su emisión." },
+  { enunciado: "El leasing es un tipo de contrato de locación.", respuesta: false, explicacion: "Tiene opción de compra y el canon incluye parte del precio.", trampa: true },
+  { enunciado: "El fiador responde solo con un bien determinado de su patrimonio.", respuesta: false, explicacion: "Eso describe al garante (garantía real). El fiador responde con todo su patrimonio.", trampa: true },
+  { enunciado: "La rescisión de un contrato tiene efecto retroactivo.", respuesta: false, explicacion: "La rescisión opera a futuro; la resolución es la que tiene efecto retroactivo.", trampa: true },
+  { enunciado: "La resolución tiene como causa un hecho posterior a la celebración del contrato.", respuesta: true, explicacion: "Por ejemplo el incumplimiento; devuelve a las partes al estado anterior." },
+  { enunciado: "Una locación temporaria puede pactarse por 6 meses sin perder ese carácter.", respuesta: false, explicacion: "El máximo es 3 meses; si lo supera se considera locación común (mínimo 3 años)." },
+  { enunciado: "El contratista de obra responde por fallas dentro de los 60 días de descubiertas.", respuesta: true, explicacion: "Además responde por fallas hasta el momento de la recepción." },
+  { enunciado: "El contrato de servicios es una obligación de resultado.", respuesta: false, explicacion: "Es de medios; la obra es la de resultado." },
+  { enunciado: "La pasantía educativa es un contrato de trabajo.", respuesta: false, explicacion: "Es una actividad formativa, no laboral." },
+  { enunciado: "El período de prueba del contrato por tiempo indeterminado es de 6 meses.", respuesta: false, explicacion: "Son 3 meses." },
+  { enunciado: "En el contrato a tiempo parcial se pueden hacer horas extra.", respuesta: false, explicacion: "La jornada es menor a 2/3 de la habitual y no se pueden hacer horas extra." },
+  { enunciado: "Las patentes de invención duran 20 años y son renovables.", respuesta: false, explicacion: "20 años no renovables desde la solicitud. Las marcas sí se renuevan." },
+  { enunciado: "El software puede patentarse como invención.", respuesta: false, explicacion: "Los programas de computación no son invenciones patentables; los protege el derecho de autor.", trampa: true },
+  { enunciado: "El derecho de autor dura la vida del autor más 70 años.", respuesta: true, explicacion: "Contados desde el 1 de enero del año siguiente a su muerte." },
+  { enunciado: "La advertencia y la amonestación se apelan ante la Justicia.", respuesta: false, explicacion: "Se apelan ante la Junta Central; multas, suspensión y cancelación van a la Justicia.", trampa: true },
+  { enunciado: "La cancelación de la matrícula debe ser dispuesta en definitiva por la Justicia.", respuesta: true, explicacion: "Implica suspensión de hasta 5 años." },
+  { enunciado: "Los consejos profesionales son personas jurídicas privadas porque nacen de un acuerdo de voluntades.", respuesta: false, explicacion: "Son públicas: las crea una ley.", trampa: true },
+  { enunciado: "La necesidad de reforma constitucional se declara con 2/3 de los miembros presentes de cada Cámara.", respuesta: false, explicacion: "Son 2/3 de la totalidad de los miembros.", trampa: true },
+  { enunciado: "El Defensor del Pueblo puede iniciar una acción de amparo.", respuesta: true, explicacion: "Junto al afectado y las asociaciones registradas." },
+  { enunciado: "Un cuasidelito se comete con dolo.", respuesta: false, explicacion: "El cuasidelito es con culpa; el delito es con dolo." },
+  { enunciado: "En las obligaciones a plazo la mora requiere interpelación previa.", respuesta: false, explicacion: "Es automática por el solo vencimiento del plazo." },
+  { enunciado: "Lo entregado en cumplimiento de un deber moral es repetible.", respuesta: false, explicacion: "Es irrepetible (art. 728)." },
+  { enunciado: "Quien posee un inmueble tiene la PROPIEDAD del mismo en sentido técnico del CCyC.", respuesta: false, explicacion: "Tiene el DOMINIO; propiedad es el concepto constitucional amplio (art. 17 CN).", trampa: true },
+  { enunciado: "La hipoteca puede constituirse sobre cosas muebles.", respuesta: false, explicacion: "Solo sobre inmuebles." },
+  { enunciado: "El asegurado debe denunciar el siniestro dentro de los 3 días de conocido.", respuesta: true, explicacion: "Además debe probar que pagó la prima." }
 ];
 
 /* =====================================================
@@ -301,11 +331,53 @@ const listaEstructuraExamen = [
 ];
 
 /* =====================================================
+   DATOS: CLASIFICADOR DE CONTRATOS
+   ===================================================== */
+const listaContratosClasificables = [
+  { nombre: "Compraventa", criterios: [
+    ["Obligaciones", ["Unilateral", "Bilateral"], 1], ["Contraprestación", ["Oneroso", "Gratuito"], 0],
+    ["Ventajas", ["Conmutativo", "Aleatorio"], 0], ["Perfeccionamiento", ["Consensual", "Real"], 0],
+    ["Dependencia", ["Principal", "Accesorio"], 0]] },
+  { nombre: "Locación de cosas", criterios: [
+    ["Obligaciones", ["Unilateral", "Bilateral"], 1], ["Contraprestación", ["Oneroso", "Gratuito"], 0],
+    ["Cumplimiento", ["Ejecución instantánea", "Tracto sucesivo"], 1], ["Dependencia", ["Principal", "Accesorio"], 0]] },
+  { nombre: "Contrato de servicios", criterios: [
+    ["Obligación", ["De medios", "De resultado"], 0], ["Contraprestación", ["Oneroso", "Gratuito"], 0],
+    ["Vínculo", ["Con dependencia", "Autónomo"], 1]] },
+  { nombre: "Contrato de obra", criterios: [
+    ["Obligación", ["De medios", "De resultado"], 1], ["Contraprestación", ["Oneroso", "Gratuito"], 0],
+    ["Vínculo", ["Con dependencia", "Autónomo"], 1]] },
+  { nombre: "Fianza", criterios: [
+    ["Obligaciones", ["Unilateral", "Bilateral"], 0], ["Dependencia", ["Principal", "Accesorio"], 1],
+    ["Forma", ["Formal", "No formal"], 0], ["Garantía", ["Personal", "Real"], 0]] },
+  { nombre: "Comodato", criterios: [
+    ["Contraprestación", ["Oneroso", "Gratuito"], 1], ["Objeto", ["Cosa fungible", "Cosa no fungible"], 1],
+    ["Tipo de préstamo", ["De uso", "De consumo"], 0]] },
+  { nombre: "Mutuo", criterios: [
+    ["Objeto", ["Cosa fungible o consumible", "Cosa no fungible"], 0], ["Tipo de préstamo", ["De uso", "De consumo"], 1],
+    ["Contraprestación", ["Siempre gratuito", "Oneroso o gratuito"], 1]] },
+  { nombre: "Seguro", criterios: [
+    ["Ventajas", ["Conmutativo", "Aleatorio"], 1], ["Cláusulas", ["Negociadas", "De adhesión"], 1],
+    ["Perfeccionamiento", ["Consensual", "Real"], 0], ["Obligaciones", ["Unilateral", "Bilateral"], 1]] },
+  { nombre: "Transporte (personas / cosas)", criterios: [
+    ["Contraprestación", ["Oneroso", "Gratuito"], 0], ["Obligaciones", ["Unilateral", "Bilateral"], 1],
+    ["Cláusulas", ["Negociadas", "De adhesión"], 1], ["Relación", ["De consumo", "Entre iguales"], 0]] },
+  { nombre: "Leasing", criterios: [
+    ["Es un contrato de…", ["Locación", "Tipo propio con opción de compra"], 1], ["Qué se transfiere al inicio", ["La tenencia", "El dominio"], 0],
+    ["Forma si es mueble", ["Instrumento privado", "Escritura pública"], 0]] },
+  { nombre: "Franquicia", criterios: [
+    ["Obligaciones", ["Unilateral", "Bilateral"], 1], ["Relación entre partes", ["Laboral", "Independientes, sin relación laboral"], 1]] },
+  { nombre: "Tarjeta de crédito", criterios: [
+    ["Cláusulas", ["Negociadas", "De adhesión"], 1], ["Cumplimiento", ["Ejecución inmediata", "Ejecución diferida"], 1]] }
+];
+
+/* =====================================================
    ESTADO DE PUNTAJES
    ===================================================== */
 const estadoPuntajes = {
   verdaderoFalso: { aciertos: 0, respondidas: 0 },
-  multipleChoice: { aciertos: 0, respondidas: 0 }
+  multipleChoice: { aciertos: 0, respondidas: 0 },
+  clasificadorContratos: { aciertos: 0, respondidas: 0 }
 };
 
 /* =====================================================
@@ -461,6 +533,42 @@ function funcionRenderizarMultipleChoice() {
 }
 
 /* =====================================================
+   RENDERIZADO: CLASIFICADOR DE CONTRATOS
+   ===================================================== */
+function funcionRenderizarClasificadorContratos() {
+  const contenedor = document.getElementById("contenedorClasificadorContratos");
+  contenedor.replaceChildren();
+  estadoPuntajes.clasificadorContratos = { aciertos: 0, respondidas: 0 };
+  funcionActualizarPuntaje("clasificadorContratos", "textoPuntajeClasificadorContratos");
+  listaContratosClasificables.forEach(function (contrato) {
+    const tarjeta = funcionCrearElemento("div", "tarjetaPregunta");
+    tarjeta.append(funcionCrearElemento("p", "textoEnunciado", contrato.nombre));
+    contrato.criterios.forEach(function (criterio) {
+      const fila = funcionCrearElemento("div", "filaCriterioContrato");
+      fila.append(funcionCrearElemento("p", "textoCriterioContrato", criterio[0]));
+      const filaOpciones = funcionCrearElemento("div", "filaOpciones");
+      const botones = criterio[1].map(function (textoOpcion, indice) {
+        const boton = funcionCrearElemento("button", "botonOpcion", textoOpcion);
+        boton.addEventListener("click", function () {
+          botones.forEach(function (otro) { otro.disabled = true; });
+          const acierto = indice === criterio[2];
+          boton.classList.add(acierto ? "botonOpcionCorrecta" : "botonOpcionIncorrecta");
+          botones[criterio[2]].classList.add("botonOpcionCorrecta");
+          estadoPuntajes.clasificadorContratos.respondidas++;
+          if (acierto) estadoPuntajes.clasificadorContratos.aciertos++;
+          funcionActualizarPuntaje("clasificadorContratos", "textoPuntajeClasificadorContratos");
+        });
+        filaOpciones.append(boton);
+        return boton;
+      });
+      fila.append(filaOpciones);
+      tarjeta.append(fila);
+    });
+    contenedor.append(tarjeta);
+  });
+}
+
+/* =====================================================
    RENDERIZADO: CASOS Y ESTRUCTURA DEL EXAMEN
    ===================================================== */
 function funcionRenderizarCasosIntegradores() {
@@ -508,11 +616,13 @@ document.getElementById("campoBuscadorMaterial").addEventListener("input", funct
 });
 document.getElementById("botonReiniciarVerdaderoFalso").addEventListener("click", funcionRenderizarVerdaderoFalso);
 document.getElementById("botonReiniciarMultipleChoice").addEventListener("click", funcionRenderizarMultipleChoice);
+document.getElementById("botonReiniciarClasificadorContratos").addEventListener("click", funcionRenderizarClasificadorContratos);
 
 funcionRenderizarMaterial("");
 funcionRenderizarTarjetasPlazos();
 funcionRenderizarCuadrosComparativos();
 funcionRenderizarVerdaderoFalso();
 funcionRenderizarMultipleChoice();
+funcionRenderizarClasificadorContratos();
 funcionRenderizarCasosIntegradores();
 funcionRenderizarEstructuraExamen();
